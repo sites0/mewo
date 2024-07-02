@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Linear Gradient Background</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="gradient-container">
+  <div class="gradient">
+    <nav class="glass-nav">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+  </nav>
+    <h1 class="pop">𝘾𝙧𝙖𝙯𝙮𝙋𝙊𝙋</h1>
+  <br> <h1 class="io">
+       &nbsp; Find the Best discord account<br>&nbsp;&nbsp;in the world and join  the &nbsp;<br>&nbsp;&nbsp;crazypop Server
+       &nbsp;<button class="button">Bio links</button> 
+    </h1>
+    <br><br><br><p>3D animation</p><h1 class="po">&nbsp;&nbsp;&nbsp;unleashing immersive <br>&nbsp;&nbsp;experience:3D elevate your brand<br>&nbsp;&nbsp;with custom 3D modeling</h1>
+  </h1>
+  <br><br><br><p>3D animation</p><h1 class="po">&nbsp;&nbsp;&nbsp;unleashing immersive <br>&nbsp;&nbsp;experience:3D elevate your brand<br>&nbsp;&nbsp;with custom 3D modeling</h1>
+</h1>
+<br><br><br><p>3D animation</p><h1 class="po">&nbsp;&nbsp;&nbsp;unleashing immersive <br>&nbsp;&nbsp;experience:3D elevate your brand<br>&nbsp;&nbsp;with custom 3D modeling</h1>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<style>
+
+  
+  p{
+    text-decoration:underline rgba(255, 255, 255, 0.788);
+    font-weight: 1000;
+    color: rgb(20, 198, 218);
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .po{
+    color: rgba(255, 255, 255, 0.537);
+    text-align: center;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .pop{
+    color: red;
+    font-size: 40px;
+    font-weight: 1000;
+    
+  }
+    .button {
+display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  /* Gradient background */
+  background: linear-gradient(to right, #FF512F, #DD2476);
+    }
+    body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.io{
+    font-size: 70px;
+    color:rgba(255, 255, 255, 0.751);
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.gradient-container {
+  width: 100%;
+  height: 100%;
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  pointer-events: none; /* Ensure the gradient doesn't interfere with mouse events */
+  background: linear-gradient(-45deg, #000000, #000000, #eb0707, #000000);
+  background-size: 400% 400%; /* Make the gradient larger to see the effect */
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.glass-nav {
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+.glass-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
+}
+
+.glass-nav li {
+    margin: 0 10px;
+}
+
+.glass-nav a {
+    text-decoration: none;
+    color: #fefefec3;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.glass-nav a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: rgba(0, 0, 0, 0.2); /* Darken background on hover */
+    border-radius: 5px; /* Optional: Rounded corners on hover */
+}
+@media screen and (min-width: 400px) {
+    .io {
+        font-size: 30px;
+        text-align: center;
+    }
+    .button{
+      display: inline-block;
+    }
+}
+</style>
+<script>
+    document.addEventListener("mousemove", function(e) {
+  const x = e.pageX / window.innerWidth;
+  const y = e.pageY / window.innerHeight;
+  
+  const gradient = document.querySelector(".gradient");
+  gradient.style.backgroundPosition = `${x * 100}% ${y * 100}%`;
+});
+
+</script>
